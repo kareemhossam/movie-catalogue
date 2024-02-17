@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "70f6e2c5-6abe-41d7-8d33-569206b0b1a7",
+		"name": "Lune Backend Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32191924"
+	},
+	"item": [
+		{
+			"name": "Search Actor By name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/actors?search=leo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"actors"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "leo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search actor by name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/actors?search=leo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"actors"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "leo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7b227b2f24078c23b8bf586611deac96\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "668ea8ab-2dfe-4c6c-bf0b-90257ccd3d1d"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.096313"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=15.23, start_processing.action_controller;dur=0.07, instantiation.active_record;dur=4.20, render.active_model_serializers;dur=11.04, process_action.action_controller;dur=28.33"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Leonardo Di Caprio\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"description\": \"A retired master car thief must come back to the industry and steal fifty cars with his crew in one night to save his brother's life.\",\n                \"director\": \"Dominic Sena\",\n                \"name\": \"Gone in 60 seconds\",\n                \"year\": 2000,\n                \"average_score\": \"3.6\",\n                \"reviews\": [\n                    {\n                        \"id\": 1,\n                        \"stars\": 4,\n                        \"body\": \"Really good!\",\n                        \"user_id\": 1,\n                        \"movie_id\": 1,\n                        \"created_at\": \"2024-02-17T10:21:53.817Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.817Z\"\n                    },\n                    {\n                        \"id\": 2,\n                        \"stars\": 3,\n                        \"body\": \"Ok movie\",\n                        \"user_id\": 2,\n                        \"movie_id\": 1,\n                        \"created_at\": \"2024-02-17T10:21:53.822Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.822Z\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"stars\": 5,\n                        \"body\": \"The best ever!\",\n                        \"user_id\": 3,\n                        \"movie_id\": 1,\n                        \"created_at\": \"2024-02-17T10:21:53.827Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.827Z\"\n                    },\n                    {\n                        \"id\": 4,\n                        \"stars\": 1,\n                        \"body\": \"Worst Ever\",\n                        \"user_id\": 4,\n                        \"movie_id\": 1,\n                        \"created_at\": \"2024-02-17T10:21:53.832Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.832Z\"\n                    },\n                    {\n                        \"id\": 5,\n                        \"stars\": 5,\n                        \"body\": \"Really really good\",\n                        \"user_id\": 5,\n                        \"movie_id\": 1,\n                        \"created_at\": \"2024-02-17T10:21:53.836Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.836Z\"\n                    }\n                ],\n                \"actors\": [\n                    \"Nicolas Cage\",\n                    \"Leonardo Di Caprio\",\n                    \"Giovani Ribisi\"\n                ]\n            },\n            {\n                \"id\": 2,\n                \"description\": \"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.\",\n                \"director\": \"Christopher Nolan\",\n                \"name\": \"Inception\",\n                \"year\": 2010,\n                \"average_score\": \"2.75\",\n                \"reviews\": [\n                    {\n                        \"id\": 6,\n                        \"stars\": 4,\n                        \"body\": \"Ok movie\",\n                        \"user_id\": 6,\n                        \"movie_id\": 2,\n                        \"created_at\": \"2024-02-17T10:21:53.840Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.840Z\"\n                    },\n                    {\n                        \"id\": 7,\n                        \"stars\": 2,\n                        \"body\": \"The best ever!\",\n                        \"user_id\": 2,\n                        \"movie_id\": 2,\n                        \"created_at\": \"2024-02-17T10:21:53.842Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.842Z\"\n                    },\n                    {\n                        \"id\": 8,\n                        \"stars\": 3,\n                        \"body\": \"Really good!\",\n                        \"user_id\": 7,\n                        \"movie_id\": 2,\n                        \"created_at\": \"2024-02-17T10:21:53.846Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.846Z\"\n                    },\n                    {\n                        \"id\": 9,\n                        \"stars\": 2,\n                        \"body\": \"Empty\",\n                        \"user_id\": 1,\n                        \"movie_id\": 2,\n                        \"created_at\": \"2024-02-17T10:21:53.849Z\",\n                        \"updated_at\": \"2024-02-17T10:21:53.849Z\"\n                    }\n                ],\n                \"actors\": [\n                    \"Leonardo Di Caprio\",\n                    \"Giovani Ribisi\",\n                    \"Joseph Gordon Levitt\",\n                    \"Ellen Page\"\n                ]\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get actor by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/actors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"actors",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get actor by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/actors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"actors",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6374ee375419f841cd898d0e585105c5\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "7d256ee6-9db3-47c7-b879-ed649f56d15c"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.027625"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.21, sql.active_record;dur=7.16, instantiation.active_record;dur=0.48, render.active_model_serializers;dur=8.56, process_action.action_controller;dur=17.82"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Nicolas Cage\",\n    \"movies\": [\n        {\n            \"id\": 1,\n            \"description\": \"A retired master car thief must come back to the industry and steal fifty cars with his crew in one night to save his brother's life.\",\n            \"director\": \"Dominic Sena\",\n            \"name\": \"Gone in 60 seconds\",\n            \"year\": 2000,\n            \"average_score\": \"3.6\",\n            \"reviews\": [\n                {\n                    \"id\": 1,\n                    \"stars\": 4,\n                    \"body\": \"Really good!\",\n                    \"user_id\": 1,\n                    \"movie_id\": 1,\n                    \"created_at\": \"2024-02-17T10:21:53.817Z\",\n                    \"updated_at\": \"2024-02-17T10:21:53.817Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"stars\": 3,\n                    \"body\": \"Ok movie\",\n                    \"user_id\": 2,\n                    \"movie_id\": 1,\n                    \"created_at\": \"2024-02-17T10:21:53.822Z\",\n                    \"updated_at\": \"2024-02-17T10:21:53.822Z\"\n                },\n                {\n                    \"id\": 3,\n                    \"stars\": 5,\n                    \"body\": \"The best ever!\",\n                    \"user_id\": 3,\n                    \"movie_id\": 1,\n                    \"created_at\": \"2024-02-17T10:21:53.827Z\",\n                    \"updated_at\": \"2024-02-17T10:21:53.827Z\"\n                },\n                {\n                    \"id\": 4,\n                    \"stars\": 1,\n                    \"body\": \"Worst Ever\",\n                    \"user_id\": 4,\n                    \"movie_id\": 1,\n                    \"created_at\": \"2024-02-17T10:21:53.832Z\",\n                    \"updated_at\": \"2024-02-17T10:21:53.832Z\"\n                },\n                {\n                    \"id\": 5,\n                    \"stars\": 5,\n                    \"body\": \"Really really good\",\n                    \"user_id\": 5,\n                    \"movie_id\": 1,\n                    \"created_at\": \"2024-02-17T10:21:53.836Z\",\n                    \"updated_at\": \"2024-02-17T10:21:53.836Z\"\n                }\n            ],\n            \"actors\": [\n                \"Nicolas Cage\",\n                \"Leonardo Di Caprio\",\n                \"Giovani Ribisi\"\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List of movies ordered by average score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/movies?direction=DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "direction",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get List of movies ordered by average score",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/movies?direction=DESC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies"
+							],
+							"query": [
+								{
+									"key": "direction",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a5774e398a95024919377d7f6b747118\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "1732625f-9723-475e-abaf-f4f3cdf53d78"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.021781"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.30, sql.active_record;dur=5.63, instantiation.active_record;dur=1.18, render.active_model_serializers;dur=6.08, process_action.action_controller;dur=15.29"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"description\": \"A retired master car thief must come back to the industry and steal fifty cars with his crew in one night to save his brother's life.\",\n        \"director\": \"Dominic Sena\",\n        \"name\": \"Gone in 60 seconds\",\n        \"year\": 2000,\n        \"average_score\": \"3.6\",\n        \"reviews\": [\n            {\n                \"id\": 1,\n                \"stars\": 4,\n                \"body\": \"Really good!\",\n                \"user_id\": 1,\n                \"movie_id\": 1,\n                \"created_at\": \"2024-02-17T10:21:53.817Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.817Z\"\n            },\n            {\n                \"id\": 2,\n                \"stars\": 3,\n                \"body\": \"Ok movie\",\n                \"user_id\": 2,\n                \"movie_id\": 1,\n                \"created_at\": \"2024-02-17T10:21:53.822Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.822Z\"\n            },\n            {\n                \"id\": 3,\n                \"stars\": 5,\n                \"body\": \"The best ever!\",\n                \"user_id\": 3,\n                \"movie_id\": 1,\n                \"created_at\": \"2024-02-17T10:21:53.827Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.827Z\"\n            },\n            {\n                \"id\": 4,\n                \"stars\": 1,\n                \"body\": \"Worst Ever\",\n                \"user_id\": 4,\n                \"movie_id\": 1,\n                \"created_at\": \"2024-02-17T10:21:53.832Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.832Z\"\n            },\n            {\n                \"id\": 5,\n                \"stars\": 5,\n                \"body\": \"Really really good\",\n                \"user_id\": 5,\n                \"movie_id\": 1,\n                \"created_at\": \"2024-02-17T10:21:53.836Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.836Z\"\n            }\n        ],\n        \"actors\": [\n            \"Nicolas Cage\",\n            \"Leonardo Di Caprio\",\n            \"Giovani Ribisi\"\n        ]\n    },\n    {\n        \"id\": 2,\n        \"description\": \"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.\",\n        \"director\": \"Christopher Nolan\",\n        \"name\": \"Inception\",\n        \"year\": 2010,\n        \"average_score\": \"2.75\",\n        \"reviews\": [\n            {\n                \"id\": 6,\n                \"stars\": 4,\n                \"body\": \"Ok movie\",\n                \"user_id\": 6,\n                \"movie_id\": 2,\n                \"created_at\": \"2024-02-17T10:21:53.840Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.840Z\"\n            },\n            {\n                \"id\": 7,\n                \"stars\": 2,\n                \"body\": \"The best ever!\",\n                \"user_id\": 2,\n                \"movie_id\": 2,\n                \"created_at\": \"2024-02-17T10:21:53.842Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.842Z\"\n            },\n            {\n                \"id\": 8,\n                \"stars\": 3,\n                \"body\": \"Really good!\",\n                \"user_id\": 7,\n                \"movie_id\": 2,\n                \"created_at\": \"2024-02-17T10:21:53.846Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.846Z\"\n            },\n            {\n                \"id\": 9,\n                \"stars\": 2,\n                \"body\": \"Empty\",\n                \"user_id\": 1,\n                \"movie_id\": 2,\n                \"created_at\": \"2024-02-17T10:21:53.849Z\",\n                \"updated_at\": \"2024-02-17T10:21:53.849Z\"\n            }\n        ],\n        \"actors\": [\n            \"Leonardo Di Caprio\",\n            \"Joseph Gordon Levitt\",\n            \"Ellen Page\",\n            \"Giovani Ribisi\"\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Movie by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Movie by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5e1396d9bf54eaeef4116817ecd54e43\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "da51f7aa-27a8-4c1a-a2f3-c3da7f3839f2"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.020128"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.28, sql.active_record;dur=5.05, instantiation.active_record;dur=0.74, render.active_model_serializers;dur=3.85, process_action.action_controller;dur=14.18"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"description\": \"A retired master car thief must come back to the industry and steal fifty cars with his crew in one night to save his brother's life.\",\n    \"director\": \"Dominic Sena\",\n    \"name\": \"Gone in 60 seconds\",\n    \"year\": 2000,\n    \"average_score\": \"3.6\",\n    \"reviews\": [\n        {\n            \"id\": 1,\n            \"stars\": 4,\n            \"body\": \"Really good!\",\n            \"user_id\": 1,\n            \"movie_id\": 1,\n            \"created_at\": \"2024-02-17T10:21:53.817Z\",\n            \"updated_at\": \"2024-02-17T10:21:53.817Z\"\n        },\n        {\n            \"id\": 2,\n            \"stars\": 3,\n            \"body\": \"Ok movie\",\n            \"user_id\": 2,\n            \"movie_id\": 1,\n            \"created_at\": \"2024-02-17T10:21:53.822Z\",\n            \"updated_at\": \"2024-02-17T10:21:53.822Z\"\n        },\n        {\n            \"id\": 3,\n            \"stars\": 5,\n            \"body\": \"The best ever!\",\n            \"user_id\": 3,\n            \"movie_id\": 1,\n            \"created_at\": \"2024-02-17T10:21:53.827Z\",\n            \"updated_at\": \"2024-02-17T10:21:53.827Z\"\n        },\n        {\n            \"id\": 4,\n            \"stars\": 1,\n            \"body\": \"Worst Ever\",\n            \"user_id\": 4,\n            \"movie_id\": 1,\n            \"created_at\": \"2024-02-17T10:21:53.832Z\",\n            \"updated_at\": \"2024-02-17T10:21:53.832Z\"\n        },\n        {\n            \"id\": 5,\n            \"stars\": 5,\n            \"body\": \"Really really good\",\n            \"user_id\": 5,\n            \"movie_id\": 1,\n            \"created_at\": \"2024-02-17T10:21:53.836Z\",\n            \"updated_at\": \"2024-02-17T10:21:53.836Z\"\n        }\n    ],\n    \"actors\": [\n        \"Nicolas Cage\",\n        \"Leonardo Di Caprio\",\n        \"Giovani Ribisi\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,24 +1,5 @@
-# README
+# Movie Catalog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+to import movies from csv, use rake task `rake import:csv_data'
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+in the root directory, there is a postman collection with all the implemented APIs and an ER diagram for your reference

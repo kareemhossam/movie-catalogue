@@ -18,4 +18,16 @@ class Movie < ApplicationRecord
   has_many :reviews
   has_many :movie_filming_locations
   has_many :filming_locations, through: :movie_filming_locations
+
+  scope :with_avg_score, -> do
+    joins(:reviews)
+      .group('movies.id')
+      .select('movies.*', 'AVG(reviews.stars) AS average_score')
+  end
+
+  scope :order_by_avg_score, ->(direction) do
+    return unless direction.present?
+
+    order("average_score #{direction}")
+  end
 end

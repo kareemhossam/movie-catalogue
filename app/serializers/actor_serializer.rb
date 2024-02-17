@@ -9,13 +9,12 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Actor < ApplicationRecord
-  has_many :movie_actors
-  has_many :movies, through: :movie_actors
+class ActorSerializer < ActiveModel::Serializer
+  attributes :id,
+             :name,
+             :movies
 
-  scope :search_by_name, ->(search) do
-    return unless search.present?
-
-    where('LOWER(name) LIKE ?', "%#{search.downcase}%")
+  def movies
+    ActiveModel::Serializer::CollectionSerializer.new(object.movies.with_avg_score, serializer: MovieSerializer)
   end
 end

@@ -4,6 +4,7 @@
 #
 #  id          :bigint           not null, primary key
 #  description :text
+#  director    :string
 #  name        :string
 #  year        :integer
 #  created_at  :datetime         not null

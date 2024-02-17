@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: filming_locations
+#
+#  id         :bigint           not null, primary key
+#  city       :string
+#  country    :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  city: MyString
+  country: MyString
+
+two:
+  city: MyString
+  country: MyString
